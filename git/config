@@ -1,0 +1,7 @@
+[user]
+	email = chronal@chronal.space
+	name = Anuj
+[init]
+	defaultBranch = main
+[github]
+	user = chronal

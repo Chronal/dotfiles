@@ -9,7 +9,7 @@
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
 
-(setq user-full-name "Anuj D"
+(setq user-full-name "Anuj"
       user-mail-address "chronal@chronal.space")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:

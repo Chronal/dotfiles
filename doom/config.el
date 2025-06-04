@@ -129,13 +129,26 @@
          :map biblio-selection-mode-map
          ("e" . ebib-biblio-selection-import)))
 
+(after! dirvish
+  (setq! dirvish-quick-access-entries
+         `(("h" "~/"                "home")
+           ("c" "~/code/"           "code")
+           ("d" "~/Downloads/"      "Downloads")
+           ("o" "~/Documents/org/"  "org"))))
+
 ;; Treemacs
 (after! treemacs
   (setq treemacs-git-mode 'extended)
-  (setq treemacs-follow-mode t)
   (setq treemacs-indent-guide-mode t)
   (setq treemacs-show-hidden-files nil))
 
+;;; Treemacs and Dirvish both bind SPC-o-p
+;;; to open in the sidebar. In the evil config
+;;; dirivish is setup afterwards so takes precedence
+(map! :after evil
+      :map doom-leader-open-map
+      "p" #'+treemacs/toggle
+      "P" #'treemacs-find-file)
 
 ;; Setting the scratch buffer default mode to org
 (setq initial-major-mode 'org-mode)

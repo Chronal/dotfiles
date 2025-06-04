@@ -1,2 +1,37 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
+" Backups
+set backup
+set writebackup
+set backupdir=$XDG_STATE_HOME/vim/backups
+
+set undofile
+set undodir=$XDG_STATE_HOME/vim/undofiles
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
+
+" Enables some in built packages
+packadd! comment
+packadd! editorconfig
+packadd! helptoc
+packadd! matchit
+packadd! nohlsearch
+
+" Loads man plugin
+runtime ftplugin/man.vim
+
+" Gui elements
+colorscheme slate
 set number
-syntax on
+set relativenumber
+set cursorline
+
+" Set fold
+set foldmethod=syntax
+set foldlevel=2
+
+" Rust plugin settings
+"" Folding
+let g:rust_fold = 2
+"" Autosaving
+let g:rustfmt_autosave = 1

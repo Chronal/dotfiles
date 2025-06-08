@@ -1,0 +1,6 @@
+[submodule "vim/pack/tpope/surround"]
+	path = vim/pack/tpope/start/surround
+	url = https://tpope.io/vim/surround.git
+[submodule "vim/pack/tpope/fugitive"]
+	path = vim/pack/tpope/start/fugitive
+	url = https://tpope.io/vim/fugitive.git

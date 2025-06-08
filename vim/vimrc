@@ -20,15 +20,25 @@ packadd! nohlsearch
 " Loads man plugin
 runtime ftplugin/man.vim
 
-" Gui elements
-colorscheme slate
+" UI elements
+colorscheme unokai
 set number
 set relativenumber
 set cursorline
+set wildmode=longest,full
 
 " Set fold
 set foldmethod=syntax
 set foldlevel=2
+
+" Indentation
+set tabstop=8
+set shiftwidth=4
+set softtabstop=-1
+set noexpandtab
+
+" Add tags from $VIMRUNTIME
+set tags+=$VIMRUNTIME/doc/tags
 
 " Rust plugin settings
 "" Folding

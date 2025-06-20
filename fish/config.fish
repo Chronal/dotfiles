@@ -11,8 +11,7 @@ test -r '/home/chronal/.opam/opam-init/init.fish' && source '/home/chronal/.opam
 # END opam configuration
 
 # Environment Variables
-set -gx EDITOR ed
-set -gx VISUAL emacsclient --no-wait --reuse-frame --alternate-editor=vim
+set -gx EDITOR emacsclient --reuse-frame --alternate-editor=vim
 
 set -gx LD_LIBRARY_PATH "/usr/lib64" "/usr/local/lib64" "/usr/local/lib/" "$HOME/.local/lib"
 

@@ -210,6 +210,8 @@
         :prefix "r"
         "u" #'org-roam-ui-open))
 
+;;; Lisp Config
+;; Adds more things to lispy
 (after! lispyville
   (lispyville-set-key-theme
    '((operators normal)
@@ -224,12 +226,20 @@
      commentary
      (additional-wrap normal insert))))
 
-;; Tweaking sly
+;; Racket
+(add-hook 'racket-mode-hook      #'racket-unicode-input-method-enable)
+(add-hook 'racket-repl-mode-hook #'racket-unicode-input-method-enable)
+
+;; sly for common-lisp
 (after! sly
   :config
-  (setq! sly-complete-symbol-function 'sly-flex-completions))
+  (setq! sly-complete-symbol-function 'sly-flex-completions)
+  ;; (add-hook! 'sly-mrepl-mode-hook #'lispy-mode)
+  (add-to-list '+lisp-quicklisp-paths "~/.local/share/quicklisp"))
 
-;; Dealing with fish issues
+;; Emacs should use this internally
+(setq shell-file-name (executable-find "bash"))
+
+;; And fish otherwise
 (setq-default vterm-shell "/usr/bin/fish")
 (setq-default explicit-shell-file-name "/usr/bin/fish")
-(setq shell-file-name (executable-find "bash"))

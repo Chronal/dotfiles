@@ -10,11 +10,10 @@ end
 test -r '/home/chronal/.opam/opam-init/init.fish' && source '/home/chronal/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
 
-set -Ux LD_LIBRARY_PATH "/usr/lib64" "/usr/local/lib64" "/usr/local/lib/" 
-
-set -Ux XDG_CONFIG_HOME "$HOME/.config"
-set -Ux XDG_DATA_HOME "$HOME/.local/share"
-set -Ux XDG_STATE_HOME "$HOME/.local/state"
+set -gx LD_LIBRARY_PATH "/usr/lib64" "/usr/local/lib64" "/usr/local/lib/" "$HOME/.local/lib"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -gx XDG_DATA_HOME "$HOME/.local/share"
+set -gx XDG_STATE_HOME "$HOME/.local/state"
 
 # pnpm
 set -gx PNPM_HOME "/home/chronal/.local/share/pnpm"

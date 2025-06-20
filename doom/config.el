@@ -35,7 +35,19 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme (seq-random-elt '(doom-snazzy doom-horizon doom-henna)))
+(setq doom-theme (seq-random-elt '(doom-bluloco-dark
+                                   doom-henna
+                                   doom-horizon
+                                   doom-laserwave
+                                   doom-molokai
+                                   doom-monokai-octagon
+                                   doom-monokai-spectrum
+                                   doom-oceanic-next
+                                   doom-palenight
+                                   doom-shades-of-purple
+                                   doom-snazzy
+                                   doom-tokyo-night
+                                   doom-xcode)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -152,17 +164,6 @@
 
 ;; Setting the scratch buffer default mode to org
 (setq initial-major-mode 'org-mode)
-
-;; Agda
-;; (setq agda2-program-args '("--library-file" "/home/dha027/.config/agda/libraries"))
-
-;;; auto-load agda-mode for .agda and .lagda.md
-;; (setq auto-mode-alist
-;;    (append
-;;      '(("\\.agda\\'" . agda2-mode)
-;;        ("\\.lagda.md\\'" . agda2-mode))
-;;      auto-mode-alist))
-
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.

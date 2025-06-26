@@ -1,0 +1,17 @@
+(require :asdf)
+
+(defvar *ql-https-dir* "~/.local/share/common-lisp/source/ql-https/")
+
+
+#-quicklisp
+(let ((quicklisp-init (merge-pathnames *ql-https-dir* "ql-setup.lisp")))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)
+    (asdf:load-system "ql-https")
+    (uiop:symbol-call :quicklisp :setup)))
+
+#+ql-https
+(setf ql-https:*quietly-use-https* t)
+
+#+sbcl
+(set-sbcl-source-location "~/code/sbcl/")

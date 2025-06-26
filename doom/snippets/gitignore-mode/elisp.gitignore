@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: elisp
+# condition: t
+# --
+# Compiled
+*.elc
+
+# Packaging
+.cask/
+.eask/
+.eldev/
+.keg/
+
+# Built distribution
+dist/
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree

@@ -28,3 +28,6 @@ fish_add_path $PNPM_HOME
 # This section can be safely removed at any time if needed.
 test -r '/home/chronal/.opam/opam-init/init.fish' && source '/home/chronal/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
 # END opam configuration
+
+# Adds fzf keybinds to fish if it's installed
+command -q fzf; and fzf --fish | source

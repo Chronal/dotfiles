@@ -1,7 +1,9 @@
 (require :asdf)
+(require :uiop)
 
-(defvar *ql-https-dir* "~/.local/share/common-lisp/source/ql-https/")
-
+(defvar *ql-https-dir*
+  (merge-pathnames "common-lisp/source/ql-https/"
+                   (uiop:getenv-absolute-directory "XDG_DATA_HOME")))
 
 #-quicklisp
 (let ((quicklisp-init (merge-pathnames *ql-https-dir* "ql-setup.lisp")))

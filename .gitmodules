@@ -4,3 +4,6 @@
 [submodule "vim/pack/tpope/fugitive"]
 	path = vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
+[submodule "fzf"]
+	path = vim/pack/junegunn/start/fzf
+	url = https://github.com/junegunn/fzf.vim.git

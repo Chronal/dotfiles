@@ -4,11 +4,16 @@ source $VIMRUNTIME/defaults.vim
 " Backups
 set backup
 set writebackup
+"" mkdir -p $XDG_STATE_HOME/vim/backups
 set backupdir=$XDG_STATE_HOME/vim/backups
 
 set undofile
+"" mkdir -p $XDG_STATE_HOME/vim/undofiles
 set undodir=$XDG_STATE_HOME/vim/undofiles
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
+
+
+
 
 " Enables some in built packages
 packadd! comment

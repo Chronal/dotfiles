@@ -1,11 +1,10 @@
-[general]
-import = []
-
 [window]
 decorations = "None"
-decorations_theme_variant = "Dark"
 opacity = 0.85
 startup_mode = "Maximized"
+
+[terminal]
+shell = "/bin/fish"
 
 [mouse]
 hide_when_typing = true

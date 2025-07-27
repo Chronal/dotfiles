@@ -16,9 +16,14 @@ set -gx XDG_STATE_HOME "$HOME/.local/state"
 ## pnpm
 set -gx PNPM_HOME $XDG_DATA_HOME/pnpm
 
+# SSH
+set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+set -gx SSH_ASKPASS ksshaskpass
+
 # Adding things to $PATH
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.config/emacs/bin # Doom
 fish_add_path $PNPM_HOME
 
 # BEGIN opam configuration, only needed for Rocq
@@ -31,3 +36,7 @@ test -r '/home/chronal/.opam/opam-init/init.fish' && source '/home/chronal/.opam
 
 # Adds fzf keybinds to fish if it's installed
 command -q fzf; and fzf --fish | source
+
+# Theming
+fish_config prompt choose acidhub
+fish_config theme  choose 'Tomorrow Night Bright'

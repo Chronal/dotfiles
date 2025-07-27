@@ -20,6 +20,9 @@ set -gx PNPM_HOME $XDG_DATA_HOME/pnpm
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 set -gx SSH_ASKPASS ksshaskpass
 
+## Agda
+set -gx AGDA_DIR $XDG_CONFIG_HOME/agda
+
 # Adding things to $PATH
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin

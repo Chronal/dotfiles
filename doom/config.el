@@ -82,6 +82,9 @@
 
 (setq org-return-follows-link t)
 
+;; emacs calendar
+(setq calendar-week-start-day 1)        ; Monday
+
 ;; org-download
 (setq org-download-screenshot-method "spectacle --region --output=%s")
 

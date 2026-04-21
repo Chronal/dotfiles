@@ -72,7 +72,7 @@
 
 ;; org-agenda
 (setq org-agenda-files '("~/Documents/org/todo.org"
-                         "~/Documents/org/csiro.org"
+                         "~/Documents/org/rottnest.org"
                          "~/Documents/org/uni.org"
                          "~/Documents/org/reading_list.org"))
 

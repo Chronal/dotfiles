@@ -243,3 +243,8 @@
 ;; And fish otherwise
 (setq-default vterm-shell "/usr/bin/fish")
 (setq-default explicit-shell-file-name "/usr/bin/fish")
+
+;; Python LSP
+(after! python
+  :config
+  (setq lsp-pyright-langserver-command "basedpyright"))

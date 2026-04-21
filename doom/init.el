@@ -96,7 +96,7 @@
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        lookup              ; navigate your code and its documentation
-       lsp               ; M-x vscode
+       (lsp +peek)               ; M-x vscode
        (magit +forge)             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -157,8 +157,8 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
        ;;purescript        ; javascript, but functional
-       (python +lsp +pyright +tree-stter) ; beautiful is better than ugly
-       (qt +lsp +tree-sitter)                ; the 'cutest' gui framework ever
+       (python +lsp  +tree-sitter +pyright) ; beautiful is better than ugly
+       (qt +lsp +tree-sitter); the 'cutest' gui framework ever
        (racket +lsp +hashlang)            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
        ;;rest              ; Emacs as a REST client

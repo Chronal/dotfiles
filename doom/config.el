@@ -142,11 +142,11 @@
          ("e" . ebib-biblio-selection-import)))
 
 (after! dirvish
-  (setq! dirvish-quick-access-entries
-         `(("h" "~/"                "home")
-           ("c" "~/code/"           "code")
-           ("d" "~/Downloads/"      "Downloads")
-           ("o" "~/Documents/org/"  "org"))))
+  (setopt dirvish-quick-access-entries
+          `(("h" "~/"                "home")
+            ("c" "~/code/"           "code")
+            ("d" "~/Downloads/"      "Downloads")
+            ("o" "~/Documents/org/"  "org"))))
 
 ;; Treemacs
 (after! treemacs
@@ -233,7 +233,7 @@
 ;; sly for common-lisp
 (after! sly
   :config
-  (setq! sly-complete-symbol-function 'sly-flex-completions)
+  (setopt sly-complete-symbol-function 'sly-flex-completions)
   ;; (add-hook! 'sly-mrepl-mode-hook #'lispy-mode)
   (add-to-list '+lisp-quicklisp-paths "~/.local/share/quicklisp"))
 

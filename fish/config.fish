@@ -23,6 +23,10 @@ set -gx SSH_ASKPASS ksshaskpass
 ## Agda
 set -gx AGDA_DIR $XDG_CONFIG_HOME/agda
 
+## Haskell
+set -gx GHCUP_USE_XDG_DIRS 1
+set -gx STACK_XDG 1
+
 # Adding things to $PATH
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin

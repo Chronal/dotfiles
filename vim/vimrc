@@ -12,9 +12,6 @@ set undofile
 set undodir=$XDG_STATE_HOME/vim/undofiles
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
 
-
-
-
 " Enables some in built packages
 packadd! comment
 packadd! editorconfig

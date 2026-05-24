@@ -27,6 +27,10 @@ set -gx AGDA_DIR $XDG_CONFIG_HOME/agda
 set -gx GHCUP_USE_XDG_DIRS 1
 set -gx STACK_XDG 1
 
+# Erlang/Elixir
+set -gx ERL_AFLAGS "-kernel shell_history enabled"
+set -gx MIX_XDG 1
+
 # Adding things to $PATH
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
@@ -46,4 +50,4 @@ command -q fzf; and fzf --fish | source
 
 # Theming
 fish_config prompt choose acidhub
-fish_config theme  choose 'Tomorrow Night Bright'
+fish_config theme choose 'Tomorrow Night Bright'

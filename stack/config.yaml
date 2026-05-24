@@ -21,3 +21,4 @@ templates:
 # stack-colors: STYLES
 install-ghc: false
 system-ghc: false
+default-init-snapshot: lts-22.44

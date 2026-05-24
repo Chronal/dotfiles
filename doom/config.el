@@ -148,6 +148,9 @@
             ("d" "~/Downloads/"      "Downloads")
             ("o" "~/Documents/org/"  "org"))))
 
+;; Projectile
+(setq projectile-project-search-path '("~/code/"))
+
 ;; Treemacs
 (after! treemacs
   (setq treemacs-git-mode 'extended)

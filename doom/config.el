@@ -155,7 +155,8 @@
 (after! treemacs
   (setq treemacs-git-mode 'extended)
   (setq treemacs-indent-guide-mode t)
-  (setq treemacs-show-hidden-files nil))
+  (setq treemacs-show-hidden-files nil)
+  (setq treemacs-follow-mode t))
 
 ;;; Treemacs and Dirvish both bind SPC-o-p
 ;;; to open in the sidebar. In the evil config
